@@ -10,6 +10,11 @@ const PORT = process.env.PORT || 3000;
 const ALERT_FILE = './alerts.json';
 
 app.use(bodyParser.json());
+app.use((req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', 'https://www.tradewithjars.net');
+  next();
+});
+
 
 let cachedPrices = { solana: 0, 'usd-coin': 1 };
 let lastFetch = 0;
