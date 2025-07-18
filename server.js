@@ -62,7 +62,11 @@ async function sendToDiscord(alert) {
             { name: 'Transaction', value: `[View on Solscan](${alert.txLink})`, inline: false }
           ],
           timestamp: alert.timestamp,
-          footer: { text: 'Solana Whale Tracker 🐬' }
+          footer: {
+            text: 'Jars SOL Whale Tracker',
+            icon_url: 'https://tradewithjars.net/TradeWithJarslogo.png'
+          }
+
         }
       ]
     })
